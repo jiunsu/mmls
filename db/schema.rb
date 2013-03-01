@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130221132938) do
+ActiveRecord::Schema.define(:version => 20130228151858) do
 
   create_table "abnormal", :primary_key => "ab_uid", :force => true do |t|
     t.integer   "abnormal_type_uid"
@@ -3534,6 +3534,13 @@ ActiveRecord::Schema.define(:version => 20130221132938) do
     t.integer "mat_uid",                  :null => false
     t.string  "mat_serial", :limit => 40, :null => false
     t.integer "quantity",                 :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string    "name"
+    t.string    "email"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
   end
 
   create_table "warehouse", :primary_key => "wh_address", :force => true do |t|

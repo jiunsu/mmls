@@ -9,6 +9,7 @@ gem 'yaml_db'
 
 group :development do
 	gem 'ibm_db', "~>2.5.11" 
+	gem 'rspec-rails', '2.11.0'
 end
 
 # Gems used only for assets and not required
@@ -23,7 +24,7 @@ group :assets do
   gem 'uglifier', '1.2.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '2.0.2'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -39,6 +40,11 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+group :test do
+  gem 'capybara', '1.1.2'
+end
+
 
 group :production do
   gem 'pg', '0.12.2'
