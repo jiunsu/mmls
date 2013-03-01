@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
+gem 'yaml_db'
 
 
 # Bundle edge Rails instead:
@@ -38,3 +39,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+group :production do
+  gem 'pg', '0.12.2'
+end
